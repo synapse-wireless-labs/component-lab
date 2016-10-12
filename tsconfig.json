@@ -1,0 +1,22 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "dist",
+    "strictNullChecks": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es6", "dom"],
+    "types": [
+      "chalk",
+      "node",
+      "lodash"
+    ],
+    "baseUrl": "./"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

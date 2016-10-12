@@ -1,0 +1,61 @@
+{
+  "name": "@synapse/component-lab",
+  "version": "0.0.1",
+  "description": "Build Angular 2 components in a controlled, isolated environment",
+  "main": "index.js",
+  "repository": {
+    "url": "git@git.synapse-wireless.com:UI-Guild/component-lab.git",
+    "type": "git"
+  },
+  "author": "Mike Ryan",
+  "license": "MIT",
+  "bin": {
+    "lab": "./src/cli.js"
+  },
+  "scripts": {
+    "copy": "cpy package.json README.md index.html release",
+    "clean": "rimraf release",
+    "build:js": "tsc -p tsconfig.dist.json",
+    "build:umd": "rollup -c rollup.config.js",
+    "build:uglify": "uglifyjs -c --screw-ie8 --comments -o ./release/bundles/component-lab.min.umd.js ./release/bundles/component-lab.umd.js",
+    "prebuild": "yarn run clean",
+    "build": "yarn run build:js && yarn run build:umd && yarn run build:uglify",
+    "postbuild": "yarn run copy"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "html-webpack-plugin": "^2.22.0",
+    "interpret": "^1.0.1",
+    "liftoff": "^2.3.0",
+    "lodash": "^4.16.4",
+    "minimist": "^1.2.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "devDependencies": {
+    "@angular/common": "^2.0.2",
+    "@angular/compiler": "^2.0.2",
+    "@angular/core": "^2.0.2",
+    "@angular/platform-browser": "^2.0.2",
+    "@angular/platform-browser-dynamic": "^2.0.2",
+    "@angular/router": "^3.0.2",
+    "@types/chalk": "^0.4.30",
+    "@types/lodash": "^4.14.37",
+    "@types/node": "^6.0.45",
+    "cpy-cli": "^1.0.1",
+    "rimraf": "^2.5.4",
+    "rollup": "^0.36.3",
+    "rxjs": "5.0.0-beta.12",
+    "typescript": "^2.0.3",
+    "uglifyjs": "^2.4.10",
+    "zone.js": "^0.6.25"
+  },
+  "peerDependencies": {
+    "@angular/common": "^2.0.2",
+    "@angular/core": "^2.0.2",
+    "@angular/platform-browser": "^2.0.2",
+    "@angular/platform-browser-dynamic": "^2.0.2",
+    "@angular/router": "^3.0.2",
+    "rxjs": "5.0.0-beta.12"
+  }
+}
