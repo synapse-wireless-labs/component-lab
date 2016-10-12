@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 
-function start(config: ComponentLabConfig, suite: string) {
+export function startServer(config: ComponentLabConfig, suite: string) {
   const webpackConfig = config.webpackConfig;
   const commandOptions = {
     host: 'localhost',

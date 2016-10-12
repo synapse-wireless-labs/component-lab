@@ -16,10 +16,11 @@
     "copy": "cpy package.json README.md index.html release",
     "clean": "rimraf release",
     "build:js": "tsc -p tsconfig.dist.json",
+    "build:cli": "tsc -p tsconfig.cli.json",
     "build:umd": "rollup -c rollup.config.js",
     "build:uglify": "uglifyjs -c --screw-ie8 --comments -o ./release/bundles/component-lab.min.umd.js ./release/bundles/component-lab.umd.js",
     "prebuild": "yarn run clean",
-    "build": "yarn run build:js && yarn run build:umd && yarn run build:uglify",
+    "build": "yarn run build:js && yarn run build:umd && yarn run build:uglify && yarn build:cli",
     "postbuild": "yarn run copy"
   },
   "dependencies": {

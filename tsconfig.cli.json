@@ -6,7 +6,7 @@
     "stripInternal": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "es2015",
+    "module": "commonjs",
     "moduleResolution": "node",
     "noEmitOnError": false,
     "outDir": "./release",
@@ -18,7 +18,7 @@
     "skipLibCheck": true
   },
   "files": [
-    "index.ts"
+    "src/cli.ts"
   ],
   "angularCompilerOptions": {
     "strictMetadataEmit": true

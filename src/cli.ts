@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import * as chalk from 'chalk';
+import { startServer } from './server';
 const Liftoff = require('liftoff');
 const minimist = require('minimist');
 const interpret = require('interpret');
@@ -51,4 +52,8 @@ function launch(env: any) {
     log(chalk.red('No local component-lab config file found'));
     process.exit(1);
   }
+
+  const config = require(env.configPath);
+
+  startServer(config, suite);
 }
