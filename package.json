@@ -30,8 +30,8 @@
     "liftoff": "^2.3.0",
     "lodash": "^4.16.4",
     "minimist": "^1.2.0",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "2.1.0-beta.25",
+    "webpack-dev-server": "v2.1.0-beta.9"
   },
   "devDependencies": {
     "@angular/common": "^2.0.2",
