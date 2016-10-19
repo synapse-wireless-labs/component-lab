@@ -15,6 +15,7 @@ import { Experiment, ExperimentCase } from '../models/experiment';
           <a 
             *ngFor="let c of experiment.cases" 
             [routerLink]="[ '/', 'experiment', 'preview', experiment.id, c.id ]"
+            routerLinkActive="caseLinkActive"
             class="caseLink">
             {{ c.description }}
           </a>
@@ -27,6 +28,8 @@ import { Experiment, ExperimentCase } from '../models/experiment';
       display: block;
       padding: 16px;
       width: 220px;
+      max-height: 100vh;
+      overflow: auto;
       box-sizing: border-box;
     }
 
@@ -59,7 +62,7 @@ import { Experiment, ExperimentCase } from '../models/experiment';
       transition: all 200ms;
     }
 
-    .caseLink.active, .caseLink:hover {
+    .caseLink.caseLinkActive, .caseLink:hover {
       color: white;
       background-color: #1D202B;
     }
