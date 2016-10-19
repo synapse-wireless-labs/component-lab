@@ -1,6 +1,6 @@
 {
   "name": "@synapse/component-lab",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "description": "Build Angular 2 components in a controlled, isolated environment",
   "main": "index.js",
   "repository": {
