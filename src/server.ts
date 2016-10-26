@@ -9,16 +9,11 @@ const path = require('path');
 
 export function startServer(config: ComponentLabConfig, suite: string) {
   const webpackConfig = config.webpackConfig;
-  const commandOptions = {
-    host: 'localhost',
-    port: 8080
-  };
-
   const includes = config.include || [];
 
   webpackConfig.entry = {
     main: [
-      `webpack-dev-server/client?http://${commandOptions.host}:${commandOptions.port}/`,
+      `webpack-dev-server/client?http://${config.host}:${config.port}/`,
       ...includes,
       config.suites[suite]
     ]
@@ -54,7 +49,7 @@ export function startServer(config: ComponentLabConfig, suite: string) {
   const server = new WebpackDevServer(compiler, serverConfig);
 
   return new Promise((resolve, reject) => {
-    server.listen(commandOptions.port, `${commandOptions.host}`, function(err, stats) {
+    server.listen(config.port, `${config.host}`, function(err, stats) {
       if (err) {
         console.error(err.stack || err);
         if (err.details) { console.error(err.details); }
