@@ -7,7 +7,6 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'cl-preview-container',
   template: `
-    <cl-toolbar></cl-toolbar>
     <cl-stage>
       
       <cl-renderer [id]="caseID$ | async"></cl-renderer>
