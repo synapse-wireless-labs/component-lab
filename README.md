@@ -53,3 +53,44 @@ by [React Storybook](https://getstorybook.io/)
 
 #### Writing Experiments
 
+Create a `component-name.exp.js` file in the directory your component is located.
+
+```js
+import { experimentOn } from 'component-lab';
+
+export default experimentOn('Component Experiment Name')
+  .case('Experiment 1 Name', {
+    template: `
+      <my-component>
+        Foo
+      </my-component>
+    `
+  })
+  .case('Experiment 2 Name', {
+    template: `
+      <my-component>
+        Bar
+      </my-component>
+    `
+  });
+```
+
+
+#### Example
+
+```js
+import { experimentOn } from 'component-lab';
+import { MyButton } from 'my-button';
+
+export default experimentOn('My Button')
+  .case('Normal Button', {
+    template: `
+      <my-button></my-button>
+    `
+  })
+  .case('Warning Button', {
+    template: `
+      <my-button [type]="warning"></my-button>
+    `
+  });
+```
