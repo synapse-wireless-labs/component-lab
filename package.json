@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "bin": {
-    "lab": "./src/cli.js"
+    "component-lab": "./src/cli.js"
   },
   "scripts": {
     "copy": "cpy package.json README.md index.html release",
