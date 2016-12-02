@@ -1,13 +1,20 @@
 {
-  "name": "@synapse/component-lab",
+  "name": "component-lab",
   "version": "0.0.1-alpha.5",
   "description": "Build Angular 2 components in a controlled, isolated environment",
   "main": "index.js",
   "repository": {
-    "url": "git@git.synapse-wireless.com:UI-Guild/component-lab.git",
+    "url": "https://github.com/synapse-wireless-labs/component-lab.git",
     "type": "git"
   },
-  "author": "Mike Ryan",
+  "authors": [
+    "Mike Ryan",
+    "David Pierce",
+    "Magdalena Beverly",
+    "Mia Chung",
+    "Matt Hales",
+    "Joe Davis"
+  ],
   "license": "MIT",
   "bin": {
     "lab": "./src/cli.js"
