@@ -10,6 +10,6 @@ export interface ExperimentCase {
 export interface Experiment {
   id: string;
   name: string;
-  module: NodeModule;
+  module?: NodeModule;
   cases: ExperimentCase[];
 }

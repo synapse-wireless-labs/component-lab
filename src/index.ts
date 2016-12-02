@@ -17,7 +17,7 @@ export class ExperimentBuilder implements Experiment {
   cases: ExperimentCase[] = [];
   private _callCount = 0;
 
-  constructor(public name: string, public module: NodeModule) {
+  constructor(public name: string, public module?: NodeModule) {
     this.id = `${module.id}`;
   }
 
@@ -38,6 +38,6 @@ export class ExperimentBuilder implements Experiment {
   }
 }
 
-export function experimentOn(component: string, module: NodeModule): ExperimentBuilder {
+export function experimentOn(component: string, module?: NodeModule): ExperimentBuilder {
   return new ExperimentBuilder(component, module);
 } 

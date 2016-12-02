@@ -2,7 +2,7 @@ import { Type, ModuleWithProviders } from '@angular/core';
 import { Experiment } from './experiment';
 
 export interface Lab {
-  module: NodeModule;
+  module?: NodeModule;
   ngModule: Type<any> | ModuleWithProviders;
   loadExperiments(): Experiment[];
 };
