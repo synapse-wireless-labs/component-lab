@@ -18,7 +18,7 @@ export class ExperimentBuilder implements Experiment {
   private _callCount = 0;
 
   constructor(public name: string, public module?: NodeModule) {
-    this.id = `${module.id}`;
+    this.id = `exp${module ? module.id : ''}`;
   }
 
   case(description: string, config: CaseConfig): this {
@@ -40,4 +40,4 @@ export class ExperimentBuilder implements Experiment {
 
 export function experimentOn(component: string, module?: NodeModule): ExperimentBuilder {
   return new ExperimentBuilder(component, module);
-} 
+}

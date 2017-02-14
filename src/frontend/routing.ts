@@ -15,9 +15,6 @@ const routes: Routes = [
     component: RootContainerComponent,
     children: [
       {
-        path: ''
-      },
-      {
         path: 'preview/:experimentID/:caseID',
         component: PreviewContainerComponent
       },
