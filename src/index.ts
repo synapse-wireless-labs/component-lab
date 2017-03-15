@@ -5,6 +5,7 @@ import { bootstrap } from './frontend/bootstrap';
 export interface CaseConfig {
   context?: any;
   template: string;
+  showSource?: boolean;
   styles?: string[];
 }
 
@@ -27,6 +28,7 @@ export class ExperimentBuilder implements Experiment {
       description,
       template: config.template,
       context: config.context,
+      showSource: config.showSource,
       styles: config.styles
     });
 

@@ -4,6 +4,7 @@ export interface ExperimentCase {
   context?: any;
   template: string;
   styles?: string[];
+  showSource?: boolean;
 }
 
 
