@@ -2,25 +2,25 @@
 # yarn lockfile v1
 
 
-"@angular/common@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@angular/common/-/common-2.0.2.tgz#b4a28f7568a511f596dc2dd4e2551830642cd4f4"
+"@angular/common@4.0.0-rc.5":
+  version "4.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/@angular/common/-/common-4.0.0-rc.5.tgz#27c1ff77d3a86fa77533255f9829a9b7b366be60"
 
-"@angular/compiler@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-2.0.2.tgz#4ca4e53956cd6a36b223ce12682ba0bc289326bb"
+"@angular/compiler@4.0.0-rc.5":
+  version "4.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-4.0.0-rc.5.tgz#3f5c0fc99c0fd843287a3f2efc62e28b0d8fa177"
 
-"@angular/core@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-2.0.2.tgz#f6ace071fecac27f9ac490cabfb17d6634aeee12"
+"@angular/core@4.0.0-rc.5":
+  version "4.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-4.0.0-rc.5.tgz#2e4a2d8ca2f1466857ebb634240e17ff9b697ec5"
 
-"@angular/platform-browser-dynamic@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.0.2.tgz#089272c349f78850690f15c4c81f5089f7271e88"
+"@angular/platform-browser-dynamic@4.0.0-rc.5":
+  version "4.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-4.0.0-rc.5.tgz#75218aef8993559900b6cccd41404ec54c58b24d"
 
-"@angular/platform-browser@^2.0.2":
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-2.0.2.tgz#25b754bfc426ee5a761b0b47fc677cd7d8ae41d2"
+"@angular/platform-browser@4.0.0-rc.5":
+  version "4.0.0-rc.5"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-4.0.0-rc.5.tgz#d848e16a0c27b55f3f80ee87ce714f415172586f"
 
 "@angular/router":
   version "3.0.2"
@@ -2341,9 +2341,9 @@ rollup:
   dependencies:
     source-map-support "^0.4.0"
 
-rxjs@5.0.0-beta.12:
-  version "5.0.0-beta.12"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.0.0-beta.12.tgz#cdfde2d8c4639d20ae7794bff8fddf32da7ad337"
+rxjs@^5.1.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.2.0.tgz#db537de8767c05fa73721587a29e0085307d318b"
   dependencies:
     symbol-observable "^1.0.1"
 
