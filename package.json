@@ -35,7 +35,6 @@
     "html-webpack-plugin": "^2.22.0",
     "interpret": "^1.0.1",
     "liftoff": "^2.3.0",
-    "lodash": "^4.16.4",
     "minimist": "^1.2.0",
     "webpack": "2.2.1",
     "webpack-dev-server": "v2.1.0-beta.9"

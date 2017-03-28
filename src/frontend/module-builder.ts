@@ -1,6 +1,5 @@
 import { NgModule, Component, Type, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { flatten } from 'lodash';
 import { Experiment, ExperimentCase } from './models/experiment';
 import { ResolvedLab } from './models/lab';
 
@@ -9,7 +8,7 @@ export function getModuleForExperiments(
   inputModule: ModuleWithProviders | Type<any>,
   experiments: Experiment[]
 ): ResolvedLab {
-  const componentsWithIds = flatten(experiments.map(exp => exp.cases.map(c => {
+  const componentsWithIds = [].concat(...experiments.map(exp => exp.cases.map(c => {
     return {
       id: c.id,
       component: generateComponent(c)
