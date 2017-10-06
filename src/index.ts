@@ -9,6 +9,11 @@ export interface CaseConfig {
   styles?: string[];
 }
 
+export { getModuleForExperiments } from './frontend/module-builder';
+export { provideExperiments } from './frontend/services/experiment-registry';
+export { provideResolvedLab } from './frontend/services/experiment-factory';
+export { ComponentLabModule } from './frontend/component-lab.module';
+
 export function createLab(lab: Lab) {
   bootstrap(lab);
 }

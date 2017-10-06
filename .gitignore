@@ -34,3 +34,5 @@ dist
 spec/ngc/ngfactory/
 spec/ngc/output/
 release
+*.ngsummary.json
+*.ngfactory.ts

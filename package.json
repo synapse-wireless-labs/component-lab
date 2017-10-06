@@ -1,7 +1,7 @@
 {
   "name": "component-lab",
   "version": "0.1.0-alpha.1",
-  "description": "Build Angular 2 components in a controlled, isolated environment",
+  "description": "Build Angular components in a controlled, isolated environment",
   "main": "index.js",
   "repository": {
     "url": "https://github.com/synapse-wireless-labs/component-lab.git",
@@ -22,8 +22,8 @@
   "scripts": {
     "copy": "cpy package.json README.md index.html release",
     "clean": "rimraf release",
-    "build:js": "tsc -p tsconfig.dist.json",
-    "build:cli": "tsc -p tsconfig.cli.json",
+    "build:js": "ngc -p tsconfig.dist.json",
+    "build:cli": "ngc -p tsconfig.cli.json",
     "build:umd": "rollup -c rollup.config.js",
     "build:uglify": "uglifyjs -c --screw-ie8 --comments -o ./release/bundles/component-lab.min.umd.js ./release/bundles/component-lab.umd.js",
     "prebuild": "yarn run clean",
@@ -36,33 +36,35 @@
     "interpret": "^1.0.1",
     "liftoff": "^2.3.0",
     "minimist": "^1.2.0",
-    "webpack": "2.2.1",
-    "webpack-dev-server": "v2.1.0-beta.9"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.1.0"
   },
   "devDependencies": {
-    "@angular/common": "4.0.0-rc.5",
-    "@angular/compiler": "4.0.0-rc.5",
-    "@angular/core": "4.0.0-rc.5",
-    "@angular/platform-browser": "4.0.0-rc.5",
-    "@angular/platform-browser-dynamic": "4.0.0-rc.5",
-    "@angular/router": "4.0.0-rc.5",
+    "@angular/animations": "^4.0.0",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
     "@types/chalk": "^0.4.30",
     "@types/lodash": "^4.14.37",
     "@types/node": "^6.0.45",
     "cpy-cli": "^1.0.1",
-    "rimraf": "^2.5.4",
+    "rimraf": "^2.2.8",
     "rollup": "^0.36.3",
-    "rxjs": "^5.1.0",
-    "typescript": "^2.0.3",
+    "rxjs": "^5.4.0",
+    "typescript": "^2.4.0",
     "uglifyjs": "^2.4.10",
-    "zone.js": "^0.6.25"
+    "zone.js": "^0.8.12"
   },
   "peerDependencies": {
-    "@angular/common": "4.0.0-rc.5",
-    "@angular/core": "4.0.0-rc.5",
-    "@angular/platform-browser": "4.0.0-rc.5",
-    "@angular/platform-browser-dynamic": "4.0.0-rc.5",
-    "@angular/router": "4.0.0-rc.5",
-    "rxjs": "^5.1.0"
+    "@angular/common": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "rxjs": "^5.4.0"
   }
 }

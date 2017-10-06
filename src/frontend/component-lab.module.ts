@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
@@ -18,34 +18,49 @@ import { ToolbarComponent } from './components/toolbar';
 import { ExperimentFactoryService } from './services/experiment-factory';
 import { ExperimentRegistryService } from './services/experiment-registry';
 
+export const LAB_IMPORTS = [
+  CommonModule,
+  Routing,
+];
+
+export const LAB_PROVIDERS = [
+  ExperimentFactoryService,
+  ExperimentRegistryService,
+];
+
+export const LAB_DECLARATIONS = [
+  ComponentLabComponent,
+  RendererComponent,
+  RootContainerComponent,
+  NavComponent,
+  PreviewContainerComponent,
+  LayoutComponent,
+  StageComponent,
+  ToolbarComponent,
+];
+
+export const LAB_ENTRY_COMPONENTS = [
+  RootContainerComponent,
+  PreviewContainerComponent,
+];
+
+@NgModule({
+  imports: LAB_IMPORTS,
+  providers: LAB_PROVIDERS,
+  declarations: LAB_DECLARATIONS,
+  entryComponents: LAB_ENTRY_COMPONENTS,
+  exports: [CommonModule, LAB_DECLARATIONS]
+})
+export class ComponentLabCommonModule { }
 
 @NgModule({
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    CommonModule,
-    Routing,
-  ],
-  providers: [
-    ExperimentFactoryService,
-    ExperimentRegistryService,
-  ],
-  declarations: [
-    ComponentLabComponent,
-    RendererComponent,
-    RootContainerComponent,
-    NavComponent,
-    PreviewContainerComponent,
-    LayoutComponent,
-    StageComponent,
-    ToolbarComponent,
-  ],
-  entryComponents: [
-    RootContainerComponent,
-    PreviewContainerComponent,
+    ComponentLabCommonModule    
   ],
   bootstrap: [
     ComponentLabComponent,
   ]
 })
 export class ComponentLabModule { }
+
