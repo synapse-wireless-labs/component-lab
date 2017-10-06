@@ -1,7 +1,7 @@
 {
   "name": "component-lab",
   "version": "0.1.0-alpha.1",
-  "description": "Build Angular components in a controlled, isolated environment",
+  "description": "Build Angular components, directives and pipes in a controlled, isolated environment",
   "main": "index.js",
   "repository": {
     "url": "https://github.com/synapse-wireless-labs/component-lab.git",
