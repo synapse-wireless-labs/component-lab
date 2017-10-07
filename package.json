@@ -1,6 +1,6 @@
 {
   "name": "component-lab",
-  "version": "0.1.0-alpha.1",
+  "version": "1.0.0",
   "description": "Build Angular components, directives and pipes in a controlled, isolated environment",
   "main": "index.js",
   "repository": {
