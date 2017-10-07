@@ -12,11 +12,14 @@ export interface CaseConfig {
 export { getModuleForExperiments } from './frontend/module-builder';
 export { provideExperiments } from './frontend/services/experiment-registry';
 export { provideResolvedLab } from './frontend/services/experiment-factory';
-export { ComponentLabModule } from './frontend/component-lab.module';
+export { ComponentLabModule, ComponentLabCommonModule } from './frontend/component-lab.module';
+export { ComponentLabComponent } from './frontend/containers/app';
 
 export function createLab(lab: Lab) {
   bootstrap(lab);
 }
+
+let expId = 0;
 
 export class ExperimentBuilder implements Experiment {
   id: string;
@@ -24,7 +27,7 @@ export class ExperimentBuilder implements Experiment {
   private _callCount = 0;
 
   constructor(public name: string, public module?: NodeModule) {
-    this.id = `exp${module ? module.id : ''}`;
+    this.id = `exp${module ? module.id : ++expId}`;
   }
 
   case(description: string, config: CaseConfig): this {

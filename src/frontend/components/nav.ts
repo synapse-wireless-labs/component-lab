@@ -31,6 +31,7 @@ import { Experiment, ExperimentCase } from '../models/experiment';
       max-height: 100vh;
       overflow: auto;
       box-sizing: border-box;
+      background-color: #262A34;
     }
 
     span, a {

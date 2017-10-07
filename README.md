@@ -119,7 +119,8 @@ export class LabModule { }
 createLab({
   /**
   * NgModule to import. All components and pipes must be exported
-  * by this module to be useable in your experiments
+  * by this module to be useable in your experiments. Use an existing
+  * NgModule from your application or create a custom one.
   */  
   ngModule: LabModule,
 

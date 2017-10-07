@@ -56,6 +56,7 @@ export class ComponentLabCommonModule { }
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ComponentLabCommonModule    
   ],
   bootstrap: [
