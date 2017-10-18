@@ -1,8 +1,8 @@
-import { Injectable, OpaqueToken, Inject } from '@angular/core';
+import { Injectable, InjectionToken, Inject } from '@angular/core';
 import { Experiment, ExperimentCase } from '../models/experiment';
 
 
-export const EXPERIMENTS = new OpaqueToken('Experiments');
+export const EXPERIMENTS = new InjectionToken('Experiments');
 
 export type IdMap<T extends { id: string }> = { [id: string]: T }
 
