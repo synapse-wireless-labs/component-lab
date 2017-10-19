@@ -205,7 +205,26 @@ createLab({
     }
 ```
 
-6. Run the CLI with your lab app.
+6. Update your `tsconfig.app.json` to exclude your lab files.
+
+```json
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "baseUrl": "./",
+    "module": "es2015",
+    "types": []
+  },
+  "exclude": [
+    "lab.ts",
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+}
+```
+
+7. Run the CLI with your lab app.
 
 ```bash
 npm start -- --app component-lab --port 8080
