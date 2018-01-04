@@ -1,6 +1,6 @@
 # Component Lab 
 A component development and testing tool built for Angular, inspired
-by [React Storybook](https://getstorybook.io/)
+by [Storybook](https://storybook.js.org/)
 
 ![](http://i.imgur.com/Lcv41dc.png)
 
